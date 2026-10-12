@@ -757,6 +757,29 @@ a.banner-badge:is(:hover, :focus-visible) {
 	}
 }
 
+/*
+ * Card entrance: after the banner, the cards fade in and rise 12px,
+ * one after another, the same way as the banner's contents.
+ */
+@media (prefers-reduced-motion: no-preference) {
+	.legal-cards > li {
+		animation: banner-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+		animation-delay: 0.3s;
+	}
+
+	.legal-cards > li:nth-child(2) {
+		animation-delay: 0.38s;
+	}
+
+	.legal-cards > li:nth-child(3) {
+		animation-delay: 0.46s;
+	}
+
+	.legal-cards > li:nth-child(4) {
+		animation-delay: 0.54s;
+	}
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
